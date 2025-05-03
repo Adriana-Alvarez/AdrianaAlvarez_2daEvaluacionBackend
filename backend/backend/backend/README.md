@@ -19,27 +19,28 @@ con el endpoint desarrollado el ingreso de nuevos usuarios a nuestra plataforma 
 -- pip install psycopg2-binary
 -- pip install supabase
 
-## 📦 Instalación
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/usuario/nombre-proyecto.git
 
 
 # Endpoint desarrollado
 - POST /usuarios/crear/
 Encargado de registrar un nuevo usuario en la base de datos
 
-- Ejemplo en JSON para poder ingrear para probar con POSTMAN
+# Prueba el endpoint con POSTMAN
+- Se debe levantar el servicio con ayuda de
+    -- python manage.py runserver
+- Se debe copiar la ruta en la que se levanta el servicio acompañado de usuarios/crear/
+    -- http://127.0.0.1:8000/usuarios/crear/
+- Se debe poner en metodo POST pegando la ruta permitiendo el ingreso del registro en JSON
+- Ejemplo en JSON para poder ingrear un nuevo usuario
 
 {
     "usuario": "nombre_usuario",
     "contrasenia": "contraseña_plana",
     "correo": "email@ejemplo.com",
-    "rol": "usuario"  # Opcional
+    "rol": "usuario" 
 }
 
-en caso de una introducción correcta se muestra el siguiente JSON
+- En caso de una introducción correcta se muestra el siguiente JSON
 
 {
     "idusuario": 11,

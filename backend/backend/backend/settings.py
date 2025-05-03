@@ -38,19 +38,20 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'backend',
-    'corsheaders'
+    'corsheaders',
+    'backend' 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     'corsheaders.middleware.CorsMiddleware',
+     
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -132,7 +133,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-CORS_ALLOW_ALL_ORIGINS = True
+
 USE_TZ = True
 
 # Ajusta la zona horaria según tu ubicación
@@ -141,3 +142,4 @@ TIME_ZONE = 'America/La_Paz'
 SUPABASE_URL = 'https://cbhcdgfzpwcwgqvtyanp.supabase.co'
 SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNiaGNkZ2Z6cHdjd2dxdnR5YW5wIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NDU3NDkwMSwiZXhwIjoyMDYwMTUwOTAxfQ.kOaHJXZNuFLOkZVEiCkIRvEmft_R7-gVY0xzAKr-K2c'
 
+CORS_ALLOW_ALL_ORIGINS = True
